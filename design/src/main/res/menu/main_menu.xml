@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/group_1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/list1"
+            android:icon="@mipmap/ic_launcher"
+            android:title="list1" />
+        <item
+            android:id="@+id/list2"
+            android:icon="@mipmap/ic_launcher"
+            android:title="list2" />
+        <item
+            android:id="@+id/list3"
+            android:icon="@mipmap/ic_launcher"
+            android:title="list3" />
+    </group>
+    <item
+        android:id="@+id/other"
+        android:title="其他">
+        <menu>
+            <item
+                android:id="@+id/list_item1"
+                android:icon="@mipmap/ic_launcher"
+                android:title="item1" />
+            <item
+                android:id="@+id/list_item2"
+                android:icon="@mipmap/ic_launcher"
+                android:title="item2" />
+            <item
+                android:id="@+id/list_item3"
+                android:icon="@mipmap/ic_launcher"
+                android:title="item3" />
+            <item
+                android:id="@+id/list_item4"
+                android:icon="@mipmap/ic_launcher"
+                android:title="item4" />
+            <item
+                android:id="@+id/list_item5"
+                android:icon="@mipmap/ic_launcher"
+                android:title="item5" />
+        </menu>
+
+    </item>
+
+</menu>

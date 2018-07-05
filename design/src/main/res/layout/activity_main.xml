@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:gravity="center"
+        android:id="@+id/toolbar"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" >
+        <TextView
+            android:textColor="#fff"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:text="标题"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v7.widget.Toolbar>
+<!--DrawerLayout 包裹两个直接子布局，第一个为主布局，第二个为侧滑布局-->
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab"
+                android:background="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:tabGravity="fill"
+                app:tabMode="scrollable"
+                app:tabTextColor="#000"
+                app:tabSelectedTextColor="@color/colorAccent"
+                app:tabIndicatorColor="@color/colorAccent"
+                />
+
+            <android.support.v4.view.ViewPager
+                android:background="#33555555"
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <!-- NavigationView中android:layout_gravity="start" 此属性必须有-->
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navigation"
+            app:headerLayout="@layout/header"
+            android:background="#fff"
+            android:layout_gravity="start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:itemTextColor="@color/item_select"
+            app:itemIconTint="@color/item_select"
+            app:menu="@menu/main_menu"
+            />
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+
+
+</LinearLayout>
